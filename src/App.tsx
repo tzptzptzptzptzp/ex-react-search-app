@@ -1,6 +1,23 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
+const API_URL = "https://jsonplaceholder.typicode.com/users";
+
 function App() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch(API_URL)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setUsers(data);
+      });
+  }, []);
+
+  console.log(users);
+
   return (
     <div className="App">
       <div className="main">
