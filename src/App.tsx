@@ -19,13 +19,15 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <div className="main">
-        <h2>React Search App</h2>
-        <input type="text" />
-        <div className="content">
+    <div className="text-center box-border">
+      <div className="">
+        <div className="mt-16 mb-8 text-5xl">
+          <h2>React Search App</h2>
+          <input className="h-6 px-1 py-3 border text-lg" type="text" />
+        </div>
+        <div className="flex flex-wrap gap-4 w-[1200px] mx-auto">
           {users.map((user: UserType) => (
-            <div className="box">
+            <div className="w-1/5 rounded-lg shadow-md">
               <h3>{user.name}</h3>
               <hr />
               <p>{user.email}</p>
