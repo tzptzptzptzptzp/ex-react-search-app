@@ -44,8 +44,11 @@ function App() {
           />
         </div>
         <div className="grid grid-cols-5 gap-x-4 gap-y-12 w-[1200px] mx-auto">
-          {seacthQuery.map((user: UserType) => (
-            <div className="w-full min-h-[12rem] p-4 rounded-lg shadow-lg">
+          {seacthQuery.map((user: UserType, i: number) => (
+            <div
+              className="w-full min-h-[12rem] p-4 rounded-lg shadow-lg"
+              key={i}
+            >
               <div className="flex items-center justify-center h-20">
                 <h3 className="text-[1.5rem]">{user.name}</h3>
               </div>
