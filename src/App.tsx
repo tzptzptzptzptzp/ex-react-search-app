@@ -17,6 +17,7 @@ function App() {
         return res.json();
       })
       .then((data) => {
+        setSearchQuery(data);
         setUsers(data);
       });
   }, []);
