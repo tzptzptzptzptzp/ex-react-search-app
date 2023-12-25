@@ -31,6 +31,11 @@ function App() {
     );
   };
 
+  const handleReset = () => {
+    ref.current!.value = "";
+    setSearchQuery(users);
+  };
+
   return (
     <div className="text-center box-border">
       <div className="">
@@ -43,6 +48,12 @@ function App() {
             type="text"
           />
         </div>
+        <button
+          className="px-3 py-1 rounded-lg bg-black text-white"
+          onClick={handleReset}
+        >
+          リセット
+        </button>
         <div className="grid grid-cols-5 gap-x-4 gap-y-12 w-[1200px] mx-auto">
           {seacthQuery.map((user: UserType, i: number) => (
             <div
