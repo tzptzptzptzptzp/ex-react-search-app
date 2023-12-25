@@ -26,9 +26,14 @@ function App() {
     const searchTerm = ref.current?.value || "";
     setSearchQuery(
       users.filter((user: UserType) =>
-        user.name.toLowerCase().includes(searchTerm)
+        user.name.toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
+  };
+
+  const handleReset = () => {
+    ref.current!.value = "";
+    setSearchQuery(users);
   };
 
   return (
@@ -43,6 +48,12 @@ function App() {
             type="text"
           />
         </div>
+        <button
+          className="px-3 py-1 rounded-lg bg-black text-white"
+          onClick={handleReset}
+        >
+          リセット
+        </button>
         <div className="grid grid-cols-5 gap-x-4 gap-y-12 w-[1200px] mx-auto">
           {seacthQuery.map((user: UserType, i: number) => (
             <div
