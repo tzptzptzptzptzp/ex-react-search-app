@@ -26,7 +26,7 @@ function App() {
     const searchTerm = ref.current?.value || "";
     setSearchQuery(
       users.filter((user: UserType) =>
-        user.name.toLowerCase().includes(searchTerm)
+        user.name.toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
   };
