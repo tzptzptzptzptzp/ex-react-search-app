@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+## 紹介
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+こちらは React を使用した検索アプリです。  
+入力された文字列を監視し、リアルタイムで該当のオブジェクトを取り出し展開しています。
 
-Currently, two official plugins are available:
+## 使用技術
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+フロントエンド
 
-## Expanding the ESLint configuration
+- [React](https://ja.react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwindcss](https://tailwindcss.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 開発手順
 
-- Configure the top-level `parserOptions` property like this:
+npm を使用しています
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm
+npm run dev // 開発用サーバー起動
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---
+
+## Introduction
+
+This is a search application built using React.  
+It monitors the inputted text and dynamically extracts relevant objects in real-time.
+
+## Technologies Used
+
+Frontend
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Development Procedure
+
+We use npm for development.
+
+```bash
+npm
+npm run dev // Start the development server
+```
