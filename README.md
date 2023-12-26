@@ -19,3 +19,27 @@ npm を使用しています
 npm
 npm run dev // 開発用サーバー起動
 ```
+
+---
+
+## Introduction
+
+This is a search application built using React.  
+It monitors the inputted text and dynamically extracts relevant objects in real-time.
+
+## Technologies Used
+
+Frontend
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Development Procedure
+
+We use npm for development.
+
+```bash
+npm
+npm run dev // Start the development server
+```
